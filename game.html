@@ -29,8 +29,9 @@
             padding: 20px;
             box-shadow: none;
             backdrop-filter: none;
-            max-width: 500px;
-            width: 90vw;
+            max-width: 600px;
+            width: 600px;
+            margin: 0 auto;
         }
 
         .game-header {
@@ -38,47 +39,49 @@
         }
 
         .title {
-            font-size: 48px;
+            font-size: 80px;
             font-weight: bold;
             color: #776e65;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .scores-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .score-container {
             background: #bbada0;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 15px 30px;
+            border-radius: 12px;
             color: white;
             font-weight: bold;
+            min-width: 120px;
         }
 
         .score-label {
-            font-size: 12px;
+            font-size: 16px;
             text-transform: uppercase;
+            margin-bottom: 5px;
         }
 
         .score {
-            font-size: 24px;
+            font-size: 32px;
         }
 
         .restart-button {
             background: #8f7a66;
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-size: 20px;
             font-weight: bold;
             cursor: pointer;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             transition: background 0.3s;
         }
 
@@ -89,40 +92,46 @@
         .grid-container {
             position: relative;
             background: #bbada0;
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 9px;
+            padding: 20px;
             margin: 0 auto;
-            width: 400px;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            width: 600px;
+            height: 600px;
+            box-sizing: border-box;
         }
 
         .grid-row {
             display: flex;
-            gap: 10px;
-            height: 85px;
+            margin-bottom: 13.33px;
+        }
+
+        .grid-row:last-child {
+            margin-bottom: 0;
         }
 
         .grid-cell {
-            width: 85px;
-            height: 85px;
+            width: 130px;
+            height: 130px;
             background: rgba(238, 228, 218, 0.35);
-            border-radius: 6px;
+            border-radius: 9px;
+            margin-right: 13.33px;
             position: relative;
+        }
+
+        .grid-cell:last-child {
+            margin-right: 0;
         }
 
         .tile {
             position: absolute;
-            width: 85px;
-            height: 85px;
+            width: 130px;
+            height: 130px;
             background: #eee4da;
-            border-radius: 6px;
+            border-radius: 9px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 36px;
+            font-size: 48px;
             font-weight: bold;
             transition: all 0.15s ease-in-out;
             z-index: 10;
@@ -134,17 +143,17 @@
         .tile-16 { background: #f59563; color: #f9f6f2; }
         .tile-32 { background: #f67c5f; color: #f9f6f2; }
         .tile-64 { background: #f65e3b; color: #f9f6f2; }
-        .tile-128 { background: #edcf72; color: #f9f6f2; font-size: 28px; }
-        .tile-256 { background: #edcc61; color: #f9f6f2; font-size: 28px; }
-        .tile-512 { background: #edc850; color: #f9f6f2; font-size: 28px; }
-        .tile-1024 { background: #edc53f; color: #f9f6f2; font-size: 24px; }
-        .tile-2048 { background: #edc22e; color: #f9f6f2; font-size: 24px; }
+        .tile-128 { background: #edcf72; color: #f9f6f2; font-size: 40px; }
+        .tile-256 { background: #edcc61; color: #f9f6f2; font-size: 40px; }
+        .tile-512 { background: #edc850; color: #f9f6f2; font-size: 40px; }
+        .tile-1024 { background: #edc53f; color: #f9f6f2; font-size: 36px; }
+        .tile-2048 { background: #edc22e; color: #f9f6f2; font-size: 36px; }
 
         /* 超级瓷砖样式 */
-        .tile-4096 { background: #edc22e; color: #f9f6f2; font-size: 18px; }
-        .tile-8192 { background: #edc22e; color: #f9f6f2; font-size: 16px; }
+        .tile-4096 { background: #edc22e; color: #f9f6f2; font-size: 32px; }
+        .tile-8192 { background: #edc22e; color: #f9f6f2; font-size: 28px; }
         .tile[class*="tile-"]:not(.tile-2):not(.tile-4):not(.tile-8):not(.tile-16):not(.tile-32):not(.tile-64):not(.tile-128):not(.tile-256):not(.tile-512):not(.tile-1024):not(.tile-2048):not(.tile-4096):not(.tile-8192) {
-            font-size: 14px;
+            font-size: 24px;
         }
 
         .game-message {
@@ -195,10 +204,11 @@
         }
 
         .instructions {
-            margin-top: 20px;
-            font-size: 14px;
+            margin-top: 30px;
+            font-size: 18px;
             color: #776e65;
-            line-height: 1.4;
+            line-height: 1.6;
+            max-width: 600px;
         }
 
         @media (max-width: 480px) {
@@ -345,15 +355,17 @@
                             tile.className = `tile tile-${this.grid[r][c]}`;
                             tile.textContent = this.grid[r][c];
                             
-                            // Perfect positioning to match grid cells
+                            // Perfect grid alignment
                             if (window.innerWidth <= 480) {
-                                // Mobile: 60px tiles + 8px gaps
+                                // Mobile positioning
                                 tile.style.left = `${c * 68 + 8}px`;
                                 tile.style.top = `${r * 68 + 8}px`;
                             } else {
-                                // Desktop: 85px tiles + 10px gaps, starting at 15px padding
-                                tile.style.left = `${c * 95 + 15}px`;
-                                tile.style.top = `${r * 95 + 15}px`;
+                                // Desktop: perfect alignment with corrected spacing
+                                // 20px + 130px + 13.33px = 163.33px per step
+                                const positions = [20, 163.33, 306.66, 450];
+                                tile.style.left = `${positions[c]}px`;
+                                tile.style.top = `${positions[r]}px`;
                             }
                             
                             container.appendChild(tile);

@@ -539,11 +539,12 @@
         // Add loading state for iframe
         const gameIframe = document.querySelector('.game-iframe');
         gameIframe.addEventListener('load', function() {
-            // Game loaded successfully - no console output needed
+            console.log('2048 game loaded successfully!');
         });
 
         // Simple analytics tracking (you can replace with your preferred analytics)
         function trackEvent(eventName, eventData) {
+            console.log('Event tracked:', eventName, eventData);
             // Add your analytics code here
         }
 

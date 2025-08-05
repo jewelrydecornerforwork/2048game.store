@@ -106,9 +106,15 @@
             box-shadow: 0 6px 20px rgba(143, 122, 102, 0.4);
         }
 
-        /* Game Section */
+        /* Game Section - Now at top */
         .game-section {
-            padding: 80px 0;
+            padding: 40px 0;
+            background: #faf8ef;
+        }
+
+        /* Play Online Section */
+        .play-online-section {
+            padding: 60px 0;
             background: #faf8ef;
         }
 
@@ -411,21 +417,9 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>2048</h1>
-            <p>The addictive puzzle game that challenges your strategic thinking</p>
-            <a href="#game" class="cta-button">Start Playing Now</a>
-        </div>
-    </section>
-
-    <!-- Game Section -->
+    <!-- Game Section - Moved to top -->
     <section id="game" class="game-section">
         <div class="game-container">
-            <h2 class="game-title">Play 2048 Online</h2>
-            <p class="game-subtitle">Combine tiles with the same numbers to reach the ultimate goal of 2048. Use your arrow keys or swipe to move tiles and create the highest score possible!</p>
-            
             <div class="game-frame">
                 <iframe 
                     src="https://2048game.store/game.html" 
@@ -434,6 +428,23 @@
                     loading="lazy">
                 </iframe>
             </div>
+        </div>
+    </section>
+
+    <!-- Hero Section - Moved after game -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>2048</h1>
+            <p>The addictive puzzle game that challenges your strategic thinking</p>
+            <a href="#game" class="cta-button">Start Playing Now</a>
+        </div>
+    </section>
+
+    <!-- Play 2048 Online Section - Moved after hero -->
+    <section class="play-online-section">
+        <div class="game-container">
+            <h2 class="game-title">Play 2048 Online</h2>
+            <p class="game-subtitle">Combine tiles with the same numbers to reach the ultimate goal of 2048. Use your arrow keys or swipe to move tiles and create the highest score possible!</p>
         </div>
     </section>
 

@@ -140,13 +140,13 @@
             border-radius: 20px;
             padding: 20px;
             margin: 0 auto;
-            max-width: 680px;
+            max-width: 800px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .game-iframe {
             width: 100%;
-            height: 800px;
+            height: 1200px;
             border: none;
             border-radius: 15px;
             background: #faf8ef;
@@ -358,7 +358,7 @@
             }
 
             .game-iframe {
-                height: 700px;
+                height: 1100px;
             }
 
             .features h2,
@@ -378,7 +378,7 @@
 
         @media (max-width: 480px) {
             .game-iframe {
-                height: 600px;
+                height: 1000px;
             }
 
             .hero {
@@ -539,12 +539,11 @@
         // Add loading state for iframe
         const gameIframe = document.querySelector('.game-iframe');
         gameIframe.addEventListener('load', function() {
-            console.log('2048 game loaded successfully!');
+            // Game loaded successfully - no console output needed
         });
 
         // Simple analytics tracking (you can replace with your preferred analytics)
         function trackEvent(eventName, eventData) {
-            console.log('Event tracked:', eventName, eventData);
             // Add your analytics code here
         }
 

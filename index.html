@@ -431,16 +431,7 @@
         </div>
     </section>
 
-    <!-- Hero Section - Moved after game -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>2048</h1>
-            <p>The addictive puzzle game that challenges your strategic thinking</p>
-            <a href="#game" class="cta-button">Start Playing Now</a>
-        </div>
-    </section>
-
-    <!-- Play 2048 Online Section - Moved after hero -->
+    <!-- Play 2048 Online Section -->
     <section class="play-online-section">
         <div class="game-container">
             <h2 class="game-title">Play 2048 Online</h2>
@@ -563,10 +554,13 @@
             // Add your analytics code here
         }
 
-        // Track CTA button clicks
-        document.querySelector('.cta-button').addEventListener('click', function() {
-            trackEvent('cta_click', { location: 'hero' });
-        });
+        // Track CTA button clicks - with null check
+        const ctaButton = document.querySelector('.cta-button');
+        if (ctaButton) {
+            ctaButton.addEventListener('click', function() {
+                trackEvent('cta_click', { location: 'hero' });
+            });
+        }
     </script>
 </body>
 </html>

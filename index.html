@@ -136,20 +136,20 @@
         }
 
         .game-frame {
-            background: #bbada0;
-            border-radius: 20px;
-            padding: 20px;
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
             margin: 0 auto;
-            max-width: 800px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 680px;
+            box-shadow: none;
         }
 
         .game-iframe {
             width: 100%;
-            height: 1000px;
+            height: 900px;
             border: none;
-            border-radius: 15px;
-            background: #faf8ef;
+            border-radius: 0;
+            background: transparent;
         }
 
         /* Features Section */
@@ -357,8 +357,13 @@
                 font-size: 16px;
             }
 
+            .game-frame {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+
             .game-iframe {
-                height: 900px;
+                height: 800px;
             }
 
             .features h2,
@@ -378,7 +383,7 @@
 
         @media (max-width: 480px) {
             .game-iframe {
-                height: 800px;
+                height: 700px;
             }
 
             .hero {
